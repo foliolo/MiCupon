@@ -1,3 +1,8 @@
 oferta_homepage:
     path:     /hello/{name}
     defaults: { _controller: OfertaBundle:Default:index }
+
+# Modificado para acceder a las paginas estaticas mediante el nuevo enrutamiento y el FrameworkBundle
+#pagina_estatica:
+#    path:     /sitio/{pagina}
+#    defaults: { _controller: OfertaBundle:Sitio:estatica}
