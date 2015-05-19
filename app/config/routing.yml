@@ -32,3 +32,7 @@ oferta:
     resource: "@OfertaBundle/Resources/config/routing.yml"
     prefix:   /
 
+# app/config/routing.yml
+portada:
+    path:     /
+    defaults: { _controller: OfertaBundle:Default:portada }

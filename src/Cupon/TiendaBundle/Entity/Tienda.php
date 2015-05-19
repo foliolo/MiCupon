@@ -10,6 +10,7 @@
 
 namespace Cupon\TiendaBundle\Entity;
 
+use Cupon\OfertaBundle\Util\Util;
 use Doctrine\ORM\Mapping as ORM;
 
 /** @ORM\Entity */
@@ -59,6 +60,7 @@ class Tienda
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
+        $this->slug = Util::getSlug($nombre);
 
         return $this;
     }
@@ -71,19 +73,6 @@ class Tienda
     public function getNombre()
     {
         return $this->nombre;
-    }
-
-    /**
-     * Set slug
-     *
-     * @param string $slug
-     * @return Tienda
-     */
-    public function setSlug($slug)
-    {
-        $this->slug = $slug;
-
-        return $this;
     }
 
     /**
